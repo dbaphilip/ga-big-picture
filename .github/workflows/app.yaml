@@ -4,7 +4,7 @@ on:
     push:
         paths:
             - ".github/workflows/app.yaml"
-    # workflow_dispatch: # manual
+    workflow_dispatch: # manual
 
 jobs:
     HOW-GH-TOKEN-GETS-SET:
@@ -16,6 +16,7 @@ jobs:
             - run: gh --version
             - run: gh auth status
             - run: gh repo list
+            - uses: actions/checkout@v4
             - run: gh issue list
             - run: gh workflow list
             - run: gh api /repos/:owner/:repo/actions/workflows
