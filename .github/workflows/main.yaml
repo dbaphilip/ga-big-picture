@@ -4,11 +4,13 @@ on:
     push:
         paths:
             - ".github/workflows/main.yaml"
-    # workflow_dispatch: # manual
+    workflow_dispatch: # manual
 
 jobs:
     HOW-GH-TOKEN-GETS-SET:
         runs-on: ubuntu-latest
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         steps:
             - run: env
             - run: gh --version
