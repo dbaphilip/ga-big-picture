@@ -3,7 +3,7 @@ name: MASTERING GitHub Actions
 on:
     push:
         paths:
-            - ".github/workflows/main.yaml"
+            - "./.github/workflows/main.yaml"
     workflow_dispatch: # manual
 
 jobs:
