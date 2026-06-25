@@ -4,7 +4,7 @@ on:
     push:
         paths:
             - ".github/workflows/main.yaml"
-    workflow_dispatch: # manual
+    # workflow_dispatch: # manual
 
 jobs:
     HOW-GH-TOKEN-GETS-SET:
