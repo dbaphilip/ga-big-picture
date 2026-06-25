@@ -1,9 +1,7 @@
-name: LEARNING GHActions
-
 on:
     push:
         paths:
-            - "./.github/workflows/main.yaml"
+            - ".github/workflows/main.yaml"
     workflow_dispatch: # manual
 
 jobs:
