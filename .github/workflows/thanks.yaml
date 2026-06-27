@@ -10,8 +10,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
               - uses: actions/github-script@v7
-                # id: issue-script
-                # with:
+                id: issue-script
+                with:
+                    github-token: ${{ secrets.GITHUB_TOKEN }}
                 #     script: |
                 #         echo "An issue was opened!"
                 #         echo "Issue title: ${{ github.event.issue.title }}"
