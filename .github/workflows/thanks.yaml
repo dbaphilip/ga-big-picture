@@ -14,8 +14,27 @@ jobs:
                 with:
                     # github-token: ${{ secrets.GITHUB_TOKEN }}
                     script: |
-                        console.log("WELCOME TO GHA")
+                        const issue_number = context.issue.number || 1
                         console.log("---------------")
+                        console.log(`issue #: ${issue_number}`)
+
                         const owner = context.repo.owner
                         const repo = context.repo.repo
-                        console.log(`${owner} owns ${repo}`)
+
+                        const issue = await github.rest.issues.get({
+                            repo, owner, issue_number
+                        })
+                            
+                        console.log("---------------")
+                        console.log(`issue #: ${issue}`)
+
+                        const comment = await github.rest.issues.createComment({
+                            repo, owner, issue_number,
+                            body: "Thanks for your contribution 😁"
+                        })
+                            
+                        console.log("---------------")
+                        console.log(`comment #: ${comment.data.id}`)
+                        console.log(comment.data)
+
+                        
