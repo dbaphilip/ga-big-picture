@@ -26,6 +26,6 @@ jobs:
                         })
                             
                         console.log("😁😁😁😁😁😁😁😁😁😁")
-                        console.log(issue)
+                        console.log(issue.data.title)
 
                         
