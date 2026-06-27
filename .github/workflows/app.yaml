@@ -1,10 +1,10 @@
 name: MASTERING GH ACTIONS
 
 on:
-    push:
-        paths:
-            - ".github/workflows/app.yaml"
-    # workflow_dispatch: # manual
+    # push:
+    #     paths:
+    #         - ".github/workflows/app.yaml"
+    workflow_dispatch: # manual
 
 jobs:
     I-NOW-KNOW-HOW-GH-TOKEN-GETS-SET:
