@@ -9,6 +9,8 @@ on:
 jobs:
     I-NOW-KNOW-HOW-GH-TOKEN-GETS-SET:
         runs-on: ubuntu-latest
+        env:
+            GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         steps:
             - uses: actions/checkout@v4
             - run: env
