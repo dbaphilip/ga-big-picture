@@ -32,7 +32,7 @@ jobs:
 
                         const comment = await github.rest.issues.createComment({
                             repo, owner, issue_number,
-                            body: "THANK YOU for your contribution 😁"
+                            body: "THANK YOU for your contribution, Sam L Jackson 😁"
                         })
 
                         console.log("😁😁😁😁😁😁😁😁😁😁")
