@@ -32,7 +32,7 @@ jobs:
 
                         const comment = await github.rest.issues.createComment({
                             repo, owner, issue_number,
-                            body: "THANK YOU for your contribution, Sam L Jackson 😁"
+                            body: "THANK YOU so much for your contribution to our sofware. You're a true Rockstar. 😁"
                         })
 
                         console.log("😁😁😁😁😁😁😁😁😁😁")
@@ -41,7 +41,7 @@ jobs:
 
                         github.rest.issues.addLabels({
                             repo, owner, issue_number,
-                            labels: ["todo-review", "good first issue"]
+                            labels: ["todo-review", "good first issue", "bug", "documentation"]
                         })
 
                         return comment.data.id
